@@ -18,13 +18,14 @@ public class TreeNode {
         if (value < data) {
             if (leftChild == null) {
                 leftChild = new TreeNode(value);
-            }else {
+            }
+            else {
                 leftChild.insert(value);
             }
-        }else {
+        } else {
             if (rightChild == null) {
                 rightChild = new TreeNode(value);
-            }else {
+            } else {
                 rightChild.insert(value);
             }
         }
@@ -39,7 +40,7 @@ public class TreeNode {
             if (leftChild != null) {
                 return leftChild.get(value);
             }
-        }else {
+        } else {
             if (rightChild != null) {
                 return rightChild.get(value);
             }
@@ -50,7 +51,7 @@ public class TreeNode {
     public int min() {
         if (leftChild == null) {
             return data;
-        }else {
+        } else {
             return leftChild.min();
         }
     }
@@ -58,7 +59,7 @@ public class TreeNode {
     public int max() {
         if (rightChild == null) {
             return data;
-        }else {
+        } else {
             return rightChild.max();
         }
     }
