@@ -18,6 +18,10 @@ public class Main {
 
         intTree.traverseInOrder();
         System.out.println();
+
+        intTree.traversePreOrder();
+        System.out.println();
+
 //
 //        System.out.println(intTree.get(27));
 //        System.out.println(intTree.get(17));
@@ -26,9 +30,6 @@ public class Main {
 //        System.out.println(intTree.min());
 //        System.out.println(intTree.max());
 
-        intTree.delete(8888);
-        intTree.traverseInOrder();
-        System.out.println();
 
     }
 }

@@ -22,10 +22,12 @@ public class TreeNode {
             else {
                 leftChild.insert(value);
             }
-        } else {
+        }
+        else {
             if (rightChild == null) {
                 rightChild = new TreeNode(value);
-            } else {
+            }
+            else {
                 rightChild.insert(value);
             }
         }
@@ -40,18 +42,21 @@ public class TreeNode {
             if (leftChild != null) {
                 return leftChild.get(value);
             }
-        } else {
+        }
+        else {
             if (rightChild != null) {
                 return rightChild.get(value);
             }
         }
+
         return null;
     }
 
     public int min() {
         if (leftChild == null) {
             return data;
-        } else {
+        }
+        else {
             return leftChild.min();
         }
     }
@@ -59,7 +64,8 @@ public class TreeNode {
     public int max() {
         if (rightChild == null) {
             return data;
-        } else {
+        }
+        else {
             return rightChild.max();
         }
     }
@@ -71,6 +77,19 @@ public class TreeNode {
         System.out.print(data + ", ");
         if (rightChild != null) {
             rightChild.traverseInOrder();
+        }
+    }
+
+    public void traversePreOrder() {
+
+        System.out.print(data + ", ");
+
+        if (leftChild != null) {
+            leftChild.traversePreOrder();
+        }
+
+        if (rightChild != null) {
+            rightChild.traversePreOrder();
         }
     }
 

@@ -39,10 +39,7 @@ public class Tree {
             else if (subtreeRoot.getRightChild() == null) {
                 return subtreeRoot.getLeftChild();
             }
-            subtreeRoot.setData(subtreeRoot.getRightChild().min());
-            subtreeRoot.setRightChild(delete(subtreeRoot.getRightChild(), subtreeRoot.getData()));
         }
-
         return subtreeRoot;
     }
 
@@ -65,6 +62,12 @@ public class Tree {
     public void traverseInOrder() {
         if (root != null) {
             root.traverseInOrder();
+        }
+    }
+
+    public void traversePreOrder() {
+        if (root != null) {
+            root.traversePreOrder();
         }
     }
 }
